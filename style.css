@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+:root {
+    
+    /*Colors*/
+
+    /*Primary*/
+
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /*Neutral*/
+
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+body {
+    background-image: url(images/bg-pattern-top.svg);
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: hsl(185, 75%, 39%);
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.card {
+    width: 310px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px 170px 110px;
+    grid-template-areas:
+        "display"
+        "name"
+        "stats";
+    border-radius: 15px;
+    background-color: white;
+}
+.display {
+    grid-area: display;
+    background-image: url(images/bg-pattern-card.svg);
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    display: grid;   
+}
+.name {
+    grid-area: name;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    color: hsl(229, 23%, 23%);
+}
+.stats {
+    display: grid;
+    grid-area: stats;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "followers likes photo";
+    border-top: 2px solid hsl(227, 10%, 46%, 0.1);
+    place-items: center; 
+    color: hsl(229, 23%, 23%);
+}
+.followers {
+    grid-area: followers;
+}
+.likes {
+    grid-area: likes; 
+}
+.photo {
+    grid-area: photo;
+}
+
+.attribution {
+    font-size: 14px; 
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+}
+.attribution a {
+    color: hsl(226, 22%, 12%);
+    
+}
